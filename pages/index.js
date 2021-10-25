@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Luzia, eu te amo</h1>
+        <h1>Hello World, Brasvid!</h1>
       </main>
 
       <footer></footer>
