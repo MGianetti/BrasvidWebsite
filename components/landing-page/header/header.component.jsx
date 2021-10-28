@@ -4,9 +4,9 @@ import HeroSection from "./hero-section";
 
 export default function Header() {
   return (
-    <>
+    <div className={styles.Header}>
       <NavigationBar />
       <HeroSection />
-    </>
+    </div>
   );
 }

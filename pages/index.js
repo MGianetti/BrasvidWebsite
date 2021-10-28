@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Brasvid</title>
         <meta name="description" content="Solução em vidros curvos" />
-        <link rel="icon" href="/LightBlueWhiteIcon.ico" />
+        <link rel="icon" href="/images/LightBlueWhiteIcon.ico" />
       </Head>
 
       <main>
