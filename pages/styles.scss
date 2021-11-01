@@ -19,3 +19,15 @@ a {
   font-family: "MetropolisRegular";
   src: url("/fonts/Metropolis-Regular.otf");
 }
+
+@font-face {
+  font-family: "MetropolisBold";
+  src: url("/fonts/Metropolis-Bold.otf");
+}
+
+@font-face {
+  font-family: "MetropolisLight";
+  src: url("/fonts/Metropolis-Light.otf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");

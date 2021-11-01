@@ -2,4 +2,70 @@
   position: relative;
   height: 800px;
   margin-top: -63px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.HeroContent {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.HeroText {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-top: 200px;
+}
+
+.Brasvid {
+  font-size: xx-large;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.BrasvidText {
+  font-size: medium;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.WindShield {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  padding-top: 225px;
+}
+.WindShields {
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 0%;
+
+  .WindShield {
+    position: absolute !important;
+    &:nth-child(1) {
+      margin-top: -200px;
+      padding-left: 200px;
+      z-index: 3;
+    }
+    &:nth-child(2) {
+      margin-top: -250px;
+      padding-left: 300px;
+      z-index: 2;
+    }
+    &:nth-child(3) {
+      margin-top: -300px;
+      padding-left: 400px;
+      z-index: 1;
+    }
+  }
 }
