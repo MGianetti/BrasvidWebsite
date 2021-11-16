@@ -1,0 +1,35 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "extensions.ignoreRecommendations": false,
+  "colorize.languages": [
+    "javascript",
+    "javascriptreact",
+    "json",
+    "html",
+    "css"
+  ],
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "css.validate": false, // Disable css built-in lint
+  "stylelint.enable": false, // Enable sytlelint
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "javascript"
+  },
+  "editor.wordWrap": "bounded",
+  "editor.wrappingIndent": "same",
+  "editor.wordWrapColumn": 100,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
