@@ -1,8 +1,7 @@
 import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 import 'nprogress/nprogress.css'
-import '@egjs/react-flicking/dist/flicking.css'
-
+import 'react-awesome-slider/dist/styles.css'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 

@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/prefer-module */
+/* eslint-disable global-require */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -7,41 +7,46 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      dropShadow: {
-        '3xl': '3px 3px 3px rgba(0, 0, 0, 0.8)',
-      },
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         transparent: 'transparent',
         primary: {
           DEFAULT: 'var(--clr-primary)',
           light: 'var(--clr-primary-light)',
-          dark: 'var(--clr-primary-dark)',
-        },
-        secondary: {
-          DEFAULT: 'var(--clr-secondary)',
-          light: 'var(--clr-secondary-light)',
-          dark: 'var(--clr-secondary-dark)',
-        },
-        accent: {
-          DEFAULT: 'var(--clr-accent)',
+          dimmed: 'var(--clr-primary-dimmed)',
         },
       },
-      borderWidth: {
-        DEFAULT: '1px',
-        0: '0px',
-        6: '6px',
+      backgroundImage: {
+        'hero-pattern': "url('/shape-hero-section.svg')",
+        'hb-icon': "url('/hambuguer.svg')",
+      },
+      zIndex: {
+        '-1': '-1',
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+      },
+      scale: {
+        65: '0.65',
+        35: '0.35',
+      },
+      height: {
+        hero: '33rem',
+        'hero-mobile': '30rem',
       },
     },
-  },
-  variants: {
-    extend: {
+    variants: {
       extend: {
         backgroundOpacity: ['hover'],
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 }

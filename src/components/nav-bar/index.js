@@ -1,39 +1,53 @@
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
+import BrasvidLogo from '../../assets/logo.svg'
+import { MobileMenu } from './mobile-menu/index'
 
-import { LANDING_PAGE_ROUTES } from '../../resources/routes'
-import { Logo } from '../logo'
-
-export function NavBar(props) {
-  const { isOpen, onNavigate, onMenuClick } = props
+export function NavBar() {
+  const [isOpen, setOpen] = useState(false)
   const router = useRouter()
 
+  function handleMenuClick() {
+    setOpen(!isOpen)
+  }
+
+  function handleNavigation(route) {
+    router.push(route)
+    setOpen(false)
+  }
+
   return (
-    <div className="flex flex-col items-center bg-primary px-4 inset-x-0 top-0 fixed z-50">
-      <div className="h-16 max-w-4xl w-full flex items-center justify-between space-x-8">
-        <Logo />
-        <div className="hidden md:flex items-center space-x-4 text-white">
-          {LANDING_PAGE_ROUTES.map(route => (
-            <button
-              key={route.path}
-              className={`rounded-full py-0.5 px-3 hover:cursor-pointer hover:bg-white hover:bg-opacity-20 ${
-                route.path === router.asPath ? 'border-2' : 'border-0'
-              }`}
-              onClick={() => {
-                onNavigate(route.path)
-              }}
-            >
-              {route.label}
-            </button>
-          ))}
+    <div className="flex flex-col">
+      <div className="w-full max-w-4xl mx-auto flex items-center space-x-8 py-2 justify-between sm:justify-center">
+        <BrasvidLogo className="w-8 h-8 ml-8 sm:ml-0" />
+        <div className="hidden sm:flex items-center space-x-8 text-white tracking-wider">
+          <span className="text-primary-dimmed">Início</span>
+          <span>Serviços</span>
+          <span>Contato</span>
+          <span>Missão</span>
+          <span>Sobre a empresa</span>
         </div>
-        <button className="btn-icon block md:hidden" onClick={onMenuClick}>
+        <div className="sm:hidden">
           {isOpen ? (
-            <XIcon className="w-8 h-8 text-white" />
+            <>
+              <MobileMenu
+                onNavigate={handleNavigation}
+                handleClickOutside={handleMenuClick}
+                isOpen={isOpen}
+              />
+              <XIcon
+                className="w-8 h-8 mr-8 text-white"
+                onClick={handleMenuClick}
+              />
+            </>
           ) : (
-            <MenuIcon className="w-8 h-8 text-white" />
+            <MenuIcon
+              className="w-8 h-8 mr-8 text-white"
+              onClick={handleMenuClick}
+            />
           )}
-        </button>
+        </div>
       </div>
     </div>
   )

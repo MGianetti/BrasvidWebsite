@@ -1,8 +1,4 @@
 {
-  "eslint.enable": true,
-  "eslint.options": {
-    "overrideConfigFile": "${workspaceFolder}/.eslintrc.json"
-  },
   "editor.quickSuggestions": {
     "strings": true
   },
@@ -30,7 +26,6 @@
   "tailwindCSS.includeLanguages": {
     "plaintext": "javascript"
   },
-  "editor.rulers": [100],
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "same",
   "editor.wordWrapColumn": 100,

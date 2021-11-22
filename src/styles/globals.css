@@ -1,25 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@layer utilities {
+  .square {
+    aspect-ratio: 1 / 1;
+  }
+}
 
 :root {
-  --clr-primary: #5f2eea;
-  --clr-primary-light: #995eff;
-  --clr-primary-dark: #0500b6;
-  --clr-secondary: #1cc8ee;
-  --clr-secondary-light: #6efbff;
-  --clr-secondary-dark: #0097bb;
-  --clr-accent: #ed2e7e;
+  --clr-primary: #325570;
+  --clr-primary-light: #6a97b2;
+  --clr-primary-dimmed: #aac4d9;
 }
 
 html,
 body,
 #__next {
   position: relative;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 #nprogress {
@@ -32,29 +39,9 @@ body,
 }
 
 #nprogress .bar {
-  background: var(--clr-accent);
+  background: var(--clr-primary);
 }
 
-.btn-icon {
-  @apply rounded-full flex items-center justify-center p-1 transition duration-150 focus:outline-none disabled:cursor-not-allowed;
-}
-
-.btn-lg {
-  @apply rounded-full flex space-x-3 items-center justify-center px-6 py-2.5 text-center transition duration-150 focus:outline-none disabled:cursor-not-allowed tracking-wider text-base;
-}
-
-.btn-secondary {
-  @apply text-white bg-secondary hover:bg-secondary-dark;
-}
-
-.text-field {
-  @apply bg-gray-100 px-4 py-2 rounded-full appearance-none border border-transparent text-gray-700 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent;
-}
-
-.text-area {
-  @apply leading-relaxed bg-gray-100 px-4 py-2 rounded-lg appearance-none border border-transparent text-gray-700 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent;
-}
-
-input[type='checkbox'] {
-  @apply text-accent w-4 h-4 inline-block rounded-lg border-gray-300 cursor-pointer;
+.awssld__content {
+  background-color: transparent !important;
 }
