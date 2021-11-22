@@ -4,6 +4,7 @@
     "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss",
     "editorconfig.editorconfig",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "christian-kohler.path-intellisense"
   ]
 }
